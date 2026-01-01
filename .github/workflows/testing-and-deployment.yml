@@ -118,7 +118,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
           cache: "pip"
 
-      - uses: actions/cache@v4
+      - uses: actions/cache@v5
         with:
           path: ~/.local/share/pyvista/examples
           key: Examples-1-${{ hashFiles('*') }}
@@ -240,7 +240,7 @@ jobs:
           echo ("PYVISTA_EXAMPLE_DATA_PATH=" + $(python -c "import pyvista; from pyvista import examples; print(examples.USER_DATA_PATH)")) >> $env:GITHUB_ENV
 
       - name: Cache example data
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ${{ env.PYVISTA_EXAMPLE_DATA_PATH }}
           key: Examples-1-${{ hashFiles('*') }}
