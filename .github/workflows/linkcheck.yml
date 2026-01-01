@@ -20,7 +20,7 @@ jobs:
       ALLOW_PLOTTING: true
       SHELLOPTS: "errexit:pipefail"
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           persist-credentials: false
 
